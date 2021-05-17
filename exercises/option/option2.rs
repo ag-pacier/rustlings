@@ -6,8 +6,8 @@
 fn main() {
     let optional_value = Some(String::from("rustlings"));
     // TODO: Make this an if let statement whose value is "Some" type
-    if let value = Some(optional_value) {
-        println!("the value of optional value is: {}", value.unwrap().unwrap());
+    value = optional_value {
+        println!("the value of optional value is: {}", value);
     } else {
         println!("The optional value doesn't contain anything!");
     }
@@ -19,9 +19,7 @@ fn main() {
 
     // TODO: make this a while let statement - remember that vector.pop also adds another layer of Option<T>
     // You can stack `Option<T>`'s into while let and if let
-    while let value = optional_values_vec.pop() {
-        if value.is_some() {
-            println!("current value: {}", value.unwrap().unwrap());
-        }
+    value = optional_values_vec.pop() {
+        println!("current value: {}", value);
     }
 }
